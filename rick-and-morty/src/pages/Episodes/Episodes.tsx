@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import api from '../api';
-import { Episode } from '../types';
+import api from '../../api';
+import { Episode } from '../../types';
 import { Button } from 'react-bootstrap';
+import './Episodes.css'
+
+//components
+import Header from '../../components/header/header';
 
 const Episodes: React.FC = () => {
   const [episodes, setEpisodes] = useState<Episode[]>([]);
@@ -22,14 +26,18 @@ const Episodes: React.FC = () => {
   }, [page]);
 
   return (
-    <div>
-      <h1>Episodes</h1>
+    <>
+    <div className='G'>
+      <Header />
+      <h1 className='TituloP'>Episódios</h1>
       <div className="episode-list">
         {episodes.map((episode) => (
+          <div className='ep'>
           <Link to={`/episodes/${episode.id}`} key={episode.id} className="episode-card">
             <h2>{episode.name}</h2>
-            <p>Air Date: {episode.air_date}</p>
+            <p>Lançamento: {episode.air_date}</p>
           </Link>
+          </div>
         ))}
       </div>
       <div className="pagination">
@@ -41,6 +49,7 @@ const Episodes: React.FC = () => {
         </Button>
       </div>
     </div>
+    </>
   );
 };
 

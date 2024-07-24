@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import api from '../api';
-import { Episode, Character } from '../types';
+import api from '../../api';
+import { Episode, Character } from '../../types';
+
+
+//components
+import Header from '../../components/header/header';
 
 const EpisodeDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -30,19 +34,22 @@ const EpisodeDetail: React.FC = () => {
   if (!episode) return <div>Loading...</div>;
 
   return (
-    <div>
-      <h1>{episode.name}</h1>
-      <p>Air Date: {episode.air_date}</p>
-      <h2>Characters</h2>
+    <>
+    <Header />
+    <div className='G'>
+      <h1 className='TituloP'>{episode.name}</h1>
+      <h6>Lançamento: {episode.air_date}</h6>
+      <h2 className='TituloP'>Personagens</h2>
       <div className="character-list">
         {characters.map((character) => (
           <Link to={`/characters/${character.id}`} key={character.id} className="character-card">
-            <img src={character.image} alt={character.name} />
+            <img className='PersonaI' src={character.image} alt={character.name} />
             <h2>{character.name}</h2>
           </Link>
         ))}
       </div>
     </div>
+    </>
   );
 };
 

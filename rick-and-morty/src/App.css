@@ -1,31 +1,111 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-  }
-  
-  .character-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .character-card {
-    border: 1px solid #ccc;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .pagination {
+.G{
+  background: rgb(32, 35, 41);
+  color: white;
+}
+
+.TituloP{
+  color: white;   
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 5px;
+
+}
+.pagination {
     margin-top: 20px;
     justify-content: center;
     align-items: center;
   }
 
-  .Botao{
+.Botao{
     margin-right: 10px;
   }
+  .character-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .character-card {
+    border: 1px solid white;
+    margin: 10px;
+    padding: 0px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    color: white;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+  .character-card img {
+    width: 100%;
+  }
+  
+  .character-card h2{
+    font-size: 20px;
+  }
+
+  .character-card h4{
+    font-size: 20px;
+  }
+
+  .PersonaI{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+ .ep{
+    margin-bottom: 30px;
+    border: 1px solid white;
+    flex: 1 1 250px; 
+    max-width: 400px;  
+ }
+
+ .episode-list {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  align-items: flex-start; 
+  gap: 20px;
+ }
+
+
+ .episode-card {
+  border-radius: 10px; 
+  padding: 15px; 
+  text-align: center;
+  text-decoration: none;
+}
+
+.episode-card h2 {
+  font-size: 1.2em; 
+  margin-bottom: 10px; 
+}
+
+.loc{
+  margin-bottom: 30px;
+  border: 1px solid white;
+  flex: 1 1 250px; 
+  max-width: 400px;
+}
+
+.location-list{
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  align-items: flex-start; 
+  gap: 20px;
+}
+
+.location-card{
+  border-radius: 10px; 
+  padding: 15px; 
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.location-card h2{
+  font-size: 15px;
+}

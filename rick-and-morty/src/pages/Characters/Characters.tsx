@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import api from '../api';
-import { Character } from '../types';
+import api from '../../api';
+import { Character } from '../../types';
 import { Button } from 'react-bootstrap';
+
+//components
+import Header from '../../components/header/header';
+
+
 
 
 const Characters: React.FC = () => {
@@ -23,8 +28,9 @@ const Characters: React.FC = () => {
   }, [page]);
 
   return (
+    <>
+  <Header />
     <div className='G'>
-      
       <h1 className='TituloP'>Personagens</h1>
       <div className="character-list">
         {characters.map((character) => (
@@ -46,6 +52,8 @@ const Characters: React.FC = () => {
         </Button>
       </div>
     </div>
+
+    </>
   );
 };
 

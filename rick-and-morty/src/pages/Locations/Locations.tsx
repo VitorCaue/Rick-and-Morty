@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import api from '../api';
-import { Location } from '../types';
+import api from '../../api';
+import { Location } from '../../types';
 import { Button } from 'react-bootstrap';
+
+//components
+import Header from '../../components/header/header';
 
 const Locations: React.FC = () => {
   const [locations, setLocations] = useState<Location[]>([]);
@@ -22,15 +25,19 @@ const Locations: React.FC = () => {
   }, [page]);
 
   return (
-    <div>
-      <h1>Locations</h1>
+    <>
+    <div className='G'>
+      <Header />
+      <h1 className='TituloP'>Lugares</h1>
       <div className="location-list">
         {locations.map((location) => (
+          <div className='loc'>
           <Link to={`/locations/${location.id}`} key={location.id} className="location-card">
             <h2>{location.name}</h2>
             <p>Type: {location.type}</p>
             <p>Dimension: {location.dimension}</p>
           </Link>
+          </div>
         ))}
       </div>
       <div className="pagination">
@@ -42,6 +49,7 @@ const Locations: React.FC = () => {
         </Button>
       </div>
     </div>
+    </>
   );
 };
 

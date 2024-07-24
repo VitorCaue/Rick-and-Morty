@@ -2,12 +2,12 @@ import React from 'react';
 
 //rotas
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Characters from './pages/Characters';
-import CharacterDetail from './pages/CharacterDetail';
-import Episodes from './pages/Episodes';
-import EpisodeDetail from './pages/EpisodeDetail';
-import Locations from './pages/Locations';
-import LocationDetail from './pages/LocationDetail';
+import Characters from './pages/Characters/Characters';
+import CharacterDetail from './pages/CharacterDetail/CharacterDetail';
+import Episodes from './pages/Episodes/Episodes';
+import EpisodeDetail from './pages/EpisodeDetail/EpisodeDetail';
+import Locations from './pages/Locations/Locations';
+import LocationDetail from './pages/LocationDetail/LocationDetail';
 
 //
 import './App.css'

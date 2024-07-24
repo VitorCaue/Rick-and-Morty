@@ -1,0 +1,33 @@
+.header {
+    background-color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navegacao {
+    display: flex;
+    gap: 15px;
+}
+
+.rota {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.rota:hover {
+    color: white;
+    background-color: #007BFF;
+    border-radius: 5px;
+}
+
+.ico {
+    margin-top: 3px;
+}

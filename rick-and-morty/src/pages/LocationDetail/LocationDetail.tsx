@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import api from '../api';
-import { Location, Character } from '../types';
+import api from '../../api';
+import { Location, Character } from '../../types';
+
+//components
+import Header from '../../components/header/header';
 
 const LocationDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -30,20 +33,24 @@ const LocationDetail: React.FC = () => {
   if (!location) return <div>Loading...</div>;
 
   return (
-    <div>
-      <h1>{location.name}</h1>
-      <p>Type: {location.type}</p>
-      <p>Dimension: {location.dimension}</p>
-      <h2>Residents</h2>
+    <>
+    <Header />
+    <div className='G'>
+      <h1 className='TituloP'>{location.name}</h1>
+      <h6>Type: {location.type}</h6>
+      <br />
+      <h6>Dimension: {location.dimension}</h6>
+      <h2 className='TituloP'>Residentes</h2>
       <div className="character-list">
         {characters.map((character) => (
           <Link to={`/characters/${character.id}`} key={character.id} className="character-card">
-            <img src={character.image} alt={character.name} />
+            <img className='PersonaI' src={character.image} alt={character.name} />
             <h2>{character.name}</h2>
           </Link>
         ))}
       </div>
     </div>
+    </>
   );
 };
 

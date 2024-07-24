@@ -1,0 +1,50 @@
+html{
+    background: rgb(32, 35, 41);
+}
+.ImgP{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+.Char{
+    width: 300px;
+    position: relative;
+    left: 40%;
+}
+.Char h1{
+    text-align: center;
+}
+.Char p{
+    text-align: center;
+    
+}
+
+.eps{
+    text-decoration: none;
+    color: white;
+}
+.eps:hover{
+    color: aqua ;
+}
+
+.Lin{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.borda{
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.lista h2{
+    margin-top: 30px;
+}
+
+.lista hr{
+    border-top: 2px solid white;
+    width: 400px;    
+}
